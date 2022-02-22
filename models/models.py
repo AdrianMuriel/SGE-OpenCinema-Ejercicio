@@ -1,17 +1,18 @@
 # -*- coding: utf-8 -*-
 
-# from odoo import models, fields, api
+from odoo import models, fields, api
 
-
-# class openacademy(models.Model):
-#     _name = 'openacademy.openacademy'
-#     _description = 'openacademy.openacademy'
-
-#     name = fields.Char()
+class Film(models.Model):
+    _name = 'opencinema.film'
+    _description = 'Peliculas Open Cinema'
+    name = fields.Char()
+    description = fields.Text()
+    release_date = fields.Date(string='Release')
+    year = fields.Char(required=True)
+    duration = fields.Integer()
 #     value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
+
 #     @api.depends('value')
 #     def _value_pc(self):
 #         for record in self:
